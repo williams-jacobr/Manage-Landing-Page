@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -5,23 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+  <link rel="stylesheet" href="./styles.css">
   <title>Frontend Mentor | Manage landing page</title>
 
 </head>
 
 <body>
-  <nav>
-    <ul>
-      <li>Pricing</li>
-      <li>Product</li>
-      <li>About Us</li>
-      <li>Careers</li>
-      <li>Community</li>
-    </ul>
+  <header>
+    <div>
+      <img class="logo" src="./images/logo.svg"/>
+    </div>
+    <nav>
+      <ul>
+        <li>Pricing</li>
+        <li>Product</li>
+        <li>About Us</li>
+        <li>Careers</li>
+        <li>Community</li>
+      </ul>
+    </nav>
     <button type="button">Get Started</button>
-  </nav>
-
+  </header>
+  <main>
   <h1>Bring everyone together to build better products.</h1>
 
   <p>Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.</p>
@@ -76,11 +82,15 @@
   </div>
 
   <button type="button">Get Started</button>
-  <div>
+  <div class="cta-bar">
     <h3>Simplify how your team works today.</h3>
     <button type="button">Get Started</button>
   </div>
+</main>
   <footer>
+    <div>
+      <img class="logo" src="./images/logo.svg"/>
+    </div>
     <ul>
       <li>Home</li>
       <li>Pricing</li>
@@ -91,12 +101,14 @@
       <li>Privacy Policy</li>
     </ul>
 
-    <form>
-      <input>Updates in your inbox…</input>
-      <button type="submit">Go</button>
-    </form>
+    <div>
+      <form>
+        <input>Updates in your inbox…</input>
+        <button type="submit">Go</button>
+      </form>
 
-    <p>Copyright 2020. All Rights Reserved</p>
+      <p>Copyright 2020. All Rights Reserved</p>
+    </div>
 
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

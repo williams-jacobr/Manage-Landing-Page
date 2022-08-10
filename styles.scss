@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;1,700&display=swap');
+
+$primary-colour-1: hsl(12, 88%, 59%);
+$primary-colour-2: hsl(228, 39%, 23%);
+
+$secondary-solour-1: hsl(227, 12%, 61%);
+$secondary-solour-2: hsl(233, 12%, 13%);
+$secondary-solour-3: hsl(13, 100%, 96%);
+$secondary-solour-4: hsl(0, 0%, 98%);
+
+* {
+    size: 16px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+li{
+    list-style: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+    nav {
+        ul {
+            width: 50%;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}

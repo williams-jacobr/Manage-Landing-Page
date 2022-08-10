@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;1,700&display=swap");
+
+* {
+  size: 16px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  color: hsl(233, 12%, 13%);
+}
+
+header,
+main,
+footer {
+  padding: 2em;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  color: hsl(13, 100%, 96%);
+  background-color: hsl(12, 88%, 59%);
+  border: 1px transparent dotted;
+  border-radius: 30px;
+  padding: 0.5em 2em;
+  height: 3em;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav {
+  width: 50%;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cta-bar {
+  background-image: url(/images/bg-simplify-section-desktop.svg);
+  background-color: hsl(12, 88%, 59%);
+  display: flex;
+  justify-content: space-around;
+}
+
+.cta-bar h3 {
+  color:hsl(13, 100%, 96%);
+}
+
+.cta-bar button {
+  color: hsl(12, 88%, 59%);
+  background-color: hsl(0, 0%, 98%);
+}
+
+.cta-bar button:hover {
+  cursor: pointer;
+  color: hsl(13, 100%, 96%);
+}
+
+footer {
+  background-color: hsl(233, 12%, 13%);
+  display: flex;
+}
+
+footer p,
+footer li,
+footer form {
+  color: hsl(0, 0%, 98%);
+}
+
+footer .logo {
+  fill:hsl(0, 0%, 98%);
+}
+
+footer ul {
+  width: 50%;
+}
