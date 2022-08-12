@@ -1,82 +1,235 @@
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;1,700&display=swap");
-
 * {
   size: 16px;
   font-family: "Be Vietnam Pro", sans-serif;
-  color: hsl(233, 12%, 13%);
-}
+  color: #1d1e25;
+  box-sizing: border-box; }
 
-header,
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+  body p,
+  body li {
+    line-height: 1.5em; }
+
+.sr-only {
+  display: none; }
+
 main,
-footer {
-  padding: 2em;
-}
+footer,
+.cta-bar {
+  padding: 1em; }
 
 li {
-  list-style: none;
-}
+  list-style: none; }
 
 button {
-  color: hsl(13, 100%, 96%);
-  background-color: hsl(12, 88%, 59%);
+  color: #fafafa;
+  background-color: #f25f3a;
   border: 1px transparent dotted;
   border-radius: 30px;
   padding: 0.5em 2em;
-  height: 3em;
-}
+  height: 3em; }
+
+button:hover {
+  color: #ffefeb;
+  cursor: pointer; }
 
 header {
   display: flex;
-  width: 100%;
   justify-content: space-between;
-  align-items: center;
-}
+  padding: 2em;
+  align-items: center; }
+  header .logo {
+    width: 10em;
+    padding: 1em;
+    align-self: start; }
+  header nav {
+    width: 50%;
+    display: none; }
+    header nav ul {
+      display: flex;
+      justify-content: space-between; }
+  header button {
+    display: none; }
+  header .menu-toggle__icon {
+    width: 1.5em;
+    height: 4px;
+    display: block;
+    background-color: #1d1e25;
+    position: relative;
+    z-index: 5; }
+    header .menu-toggle__icon::before, header .menu-toggle__icon::after {
+      width: 100%;
+      content: '';
+      height: 4px;
+      display: block;
+      background-color: #1d1e25;
+      position: absolute;
+      left: 0; }
+    header .menu-toggle__icon::before {
+      transform: translateY(8px); }
+    header .menu-toggle__icon::after {
+      transform: translateY(-8px); }
 
-header nav {
-  width: 50%;
-}
-
-header nav ul {
+main {
   display: flex;
-  justify-content: space-between;
-}
+  flex-direction: column; }
+  main .main__stat-charts img {
+    width: 100%; }
+  main .main__intro,
+  main .main__text {
+    text-align: center;
+    margin-bottom: 5em; }
+  main .main__promotion--item {
+    display: grid;
+    grid-template-columns: 4em auto;
+    grid-template-rows: auto auto; }
+    main .main__promotion--item h3 {
+      margin: 0;
+      background-color: #f25f3a;
+      padding: 0.5em;
+      border-radius: 30px;
+      width: 100%;
+      text-align: center;
+      color: #fafafa;
+      z-index: 1; }
+    main .main__promotion--item h4 {
+      margin: 0;
+      justify-self: start;
+      font-weight: 700;
+      padding: 0.5em 2em;
+      background-color: #ffefeb;
+      width: 200%;
+      transform: translateX(-1em); }
+    main .main__promotion--item p {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      font-weight: 300;
+      color: #9095a7; }
+
+.slideshow {
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center; }
+  .slideshow h2 {
+    font-size: 2em;
+    font-weight: bolder; }
+  .slideshow .slideshow__slider {
+    display: flex;
+    width: 400%;
+    padding: 3em 0;
+    overflow: hidden; }
+    .slideshow .slideshow__slider .slideshow__slider--item {
+      width: 100%;
+      padding: 2em 1em 0 1em;
+      margin: 0.5em;
+      background-color: #fafafa;
+      position: relative; }
+      .slideshow .slideshow__slider .slideshow__slider--item p {
+        color: #9095a7; }
+      .slideshow .slideshow__slider .slideshow__slider--item .avatar {
+        width: 5em;
+        position: absolute;
+        top: 0em;
+        transform: translate(-50%, -50%); }
+  .slideshow button {
+    display: block;
+    margin: 1em auto; }
 
 .cta-bar {
   background-image: url(/images/bg-simplify-section-desktop.svg);
-  background-color: hsl(12, 88%, 59%);
+  background-color: #f25f3a;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
-}
-
-.cta-bar h3 {
-  color:hsl(13, 100%, 96%);
-}
-
-.cta-bar button {
-  color: hsl(12, 88%, 59%);
-  background-color: hsl(0, 0%, 98%);
-}
-
-.cta-bar button:hover {
-  cursor: pointer;
-  color: hsl(13, 100%, 96%);
-}
+  text-align: center; }
+  .cta-bar h3 {
+    color: #ffefeb; }
+  .cta-bar button {
+    color: #f25f3a;
+    background-color: #fafafa; }
+    .cta-bar button:hover {
+      cursor: pointer;
+      color: #ffefeb; }
 
 footer {
-  background-color: hsl(233, 12%, 13%);
+  background-color: #1d1e25;
   display: flex;
-}
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center; }
+  footer .footer__form {
+    padding: 1em; }
+    footer .footer__form--text-field {
+      padding: 0.5em 4em;
+      border-radius: 30px;
+      height: 3em;
+      color: #9095a7; }
+    footer .footer__form--button {
+      margin: 0 2em; }
+  footer .footer__shortcuts {
+    display: flex;
+    padding: 1em; }
+    footer .footer__shortcuts ul {
+      display: flex;
+      flex-flow: column wrap; }
+      footer .footer__shortcuts ul li {
+        color: #fafafa;
+        text-align: left;
+        display: block;
+        font-weight: 400;
+        line-height: 2em; }
+  footer .footer__social {
+    padding: 1em; }
+    footer .footer__social--icon {
+      margin: 0 1em;
+      width: 2em; }
+      footer .footer__social--icon:hover {
+        cursor: pointer; }
+  footer p {
+    color: #9095a7; }
+  footer .footer__logo--container {
+    padding: 1em;
+    width: 100%;
+    text-align: center; }
+  footer .footer__logo--image {
+    fill: #fafafa; }
 
-footer p,
-footer li,
-footer form {
-  color: hsl(0, 0%, 98%);
-}
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  background-image: linear-gradient(rgba(144, 149, 167, 0), rgba(144, 149, 167, 0.5)); }
 
-footer .logo {
-  fill:hsl(0, 0%, 98%);
-}
+.modal {
+  z-index: 3;
+  position: fixed;
+  left: 10vw;
+  top: 20vh;
+  width: 80vw;
+  height: 50vh;
+  background-color: white;
+  border-radius: 10px;
+  padding: 2em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
 
-footer ul {
-  width: 50%;
-}
+.closed {
+  display: none; }
+
+.attribution {
+  color: #fafafa;
+  border-top: #fafafa dashed 1px;
+  padding-top: 1em;
+  width: 100%;
+  text-align: center; }
+  .attribution a {
+    color: #9095a7; }

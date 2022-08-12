@@ -4,7 +4,8 @@
   "description": "![Design preview for the Manage landing page coding challenge](./design/desktop-preview.jpg)",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp start",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,18 @@
   "bugs": {
     "url": "https://github.com/williams-jacobr/Manage-Landing-Page/issues"
   },
-  "homepage": "https://github.com/williams-jacobr/Manage-Landing-Page#readme"
+  "homepage": "https://github.com/williams-jacobr/Manage-Landing-Page#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "@babel/register": "^7.18.9",
+    "autoprefixer": "^10.4.8",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "lodash": "^4.17.21",
+    "node-sass": "^7.0.1",
+    "postcss-scss": "^4.0.4",
+    "postcss": "^8.4.16"
+  }
 }

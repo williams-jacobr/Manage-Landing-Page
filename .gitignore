@@ -2,3 +2,9 @@
 
 README-template.md
 style-guide.md
+
+/node_modules
+
+.babelrc
+gulpfile.babel.js
+yarn.lock
