@@ -8,6 +8,14 @@ $secondary-solour-2: hsl(233, 12%, 13%);
 $secondary-solour-3: hsl(13, 100%, 96%);
 $secondary-solour-4: hsl(0, 0%, 98%);
 
+$font-small: 0.75em;
+$font-medium: 2em;
+$font-large: 3em;
+
+$small-spacer: 1em;
+$medium-spacer: 2em;
+$large-spacer: 4em;
+
 * {
     size: 16px;
     font-family: "Be Vietnam Pro", sans-serif;
@@ -19,10 +27,15 @@ body {
     width: 100%;
     padding: 0;
     margin: 0;
+    background-image: url(/images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 150px -5%;
 
     p,
     li {
-        line-height: 1.5em;
+        line-height: 2em;
+        color: $secondary-solour-1;
     }
 }
 
@@ -33,7 +46,7 @@ body {
 main,
 footer,
 .cta-bar {
-    padding: 1em;
+    padding: $small-spacer;
 }
 
 li {
@@ -45,8 +58,9 @@ button {
     background-color: hsl(12, 88%, 59%);
     border: 1px transparent dotted;
     border-radius: 30px;
-    padding: 0.5em 2em;
-    height: 3em;
+    padding: $small-spacer $medium-spacer;
+    height: 4em;
+    font-weight: 700;
 }
 
 button:hover {
@@ -57,12 +71,12 @@ button:hover {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 2em;
+    padding: $medium-spacer;
     align-items: center;
 
     .logo {
         width: 10em;
-        padding: 1em;
+        padding: $small-spacer;
         align-self: start;
     }
 
@@ -121,6 +135,14 @@ main {
     .main__text {
         text-align: center;
         margin-bottom: 5em;
+
+        h1 {
+            font-size: $font-large;
+        }
+
+        h2 {
+            font-size: $font-medium;
+        }
     }
 
     .main__promotion--item {
@@ -143,10 +165,10 @@ main {
             margin: 0;
             justify-self: start;
             font-weight: 700;
-            padding: 0.5em 2em;
+            padding: 0.5em $medium-spacer;
             background-color: hsl(13, 100%, 96%);
             width: 200%;
-            transform: translateX(-1em);
+            transform: translateX(-$small-spacer);
         }
 
         p {
@@ -178,7 +200,7 @@ main {
 
         .slideshow__slider--item {
             width: 100%;
-            padding: 2em 1em 0 1em;
+            padding: $medium-spacer $small-spacer 0 $small-spacer;
             margin: 0.5em;
             background-color: hsl(0, 0%, 98%);
             position: relative;
@@ -198,23 +220,27 @@ main {
 
     button {
         display: block;
-        margin: 1em auto;
+        margin: $small-spacer auto;
     }
 }
 
 .cta-bar {
     background-image: url(/images/bg-simplify-section-desktop.svg);
+    background-size: cover;
     background-color: hsl(12, 88%, 59%);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: $large-spacer $medium-spacer;
 
-    h3 {
+    h2 {
+        font-size: $font-large;
+        text-align: center;
         color:hsl(13, 100%, 96%);
     }
 
-    button {
+    &__button {
         color: hsl(12, 88%, 59%);
         background-color: hsl(0, 0%, 98%);
 
@@ -230,31 +256,34 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
-    align-items: center;
 
     .footer__form {
-        padding: 1em;
+        padding: $small-spacer;
+        display: flex;
+        margin-top: $medium-spacer;
+        width:400px;
 
         &--text-field {
-            padding: 0.5em 4em;
+            padding: 0 2em;
             border-radius: 30px;
-            height: 3em;
+            height: 4em;
             color: hsl(227, 12%, 61%);
         }
 
         &--button {
-            margin: 0 2em;
+            margin: 0 $medium-spacer;
         }
     }
 
 
     .footer__shortcuts {
         display: flex;
-        padding: 1em;
+        justify-content: space-evenly;
+        padding: $small-spacer;
 
         ul {
             display: flex;
-            flex-flow: column wrap;
+            flex-flow: column;
 
             li {
                 color: hsl(0, 0%, 98%);
@@ -267,10 +296,13 @@ footer {
     }
 
     .footer__social {
-        padding: 1em;
+        padding: $small-spacer;
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: $medium-spacer;
 
         &--icon {
-            margin: 0 1em;
+            margin: 0 $small-spacer;
             width: 2em;
 
             &:hover {
@@ -280,20 +312,28 @@ footer {
     }
 
     p {
-        color: hsl(227, 12%, 61%);
     }
 
     .footer__logo {
 
         &--container {
-            padding: 1em;
+            padding: $small-spacer;
             width: 100%;
             text-align: center;
         }
 
         &--image {
             fill:hsl(0, 0%, 98%);
+            width: 50%;
         }
+    }
+
+    .footer__copyright {
+        display: block;
+        text-align: center;
+        margin-bottom: $medium-spacer;
+        color: hsl(227, 12%, 61%);
+        font-size: $font-small;
     }
 }
 
@@ -316,7 +356,7 @@ footer {
     height: 50vh;
     background-color: white;
     border-radius: 10px;
-    padding: 2em;
+    padding: $medium-spacer;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -330,7 +370,7 @@ footer {
 .attribution {
     color: $secondary-solour-4;
     border-top: $secondary-solour-4 dashed 1px;
-    padding-top: 1em;
+    padding-top: $small-spacer;
     width: 100%;
     text-align: center;
 
