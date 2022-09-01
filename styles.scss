@@ -3,23 +3,27 @@
 $primary-colour-1: hsl(12, 88%, 59%);
 $primary-colour-2: hsl(228, 39%, 23%);
 
-$secondary-solour-1: hsl(227, 12%, 61%);
-$secondary-solour-2: hsl(233, 12%, 13%);
-$secondary-solour-3: hsl(13, 100%, 96%);
-$secondary-solour-4: hsl(0, 0%, 98%);
+$secondary-colour-1: hsl(227, 12%, 61%);
+$secondary-colour-2: hsl(233, 12%, 13%);
+$secondary-colour-3: hsl(13, 100%, 96%);
+$secondary-colour-4: hsl(0, 0%, 98%);
 
 $font-small: 0.75em;
 $font-medium: 2em;
 $font-large: 3em;
 
+$logo-width-small: 10em;
+
 $small-spacer: 1em;
 $medium-spacer: 2em;
 $large-spacer: 4em;
 
+$breakpoint: 1024px;
+
 * {
     size: 16px;
     font-family: "Be Vietnam Pro", sans-serif;
-    color: hsl(233, 12%, 13%);
+    color: $secondary-colour-2;
     box-sizing: border-box;
 }
 
@@ -35,7 +39,7 @@ body {
     p,
     li {
         line-height: 2em;
-        color: $secondary-solour-1;
+        color: $secondary-colour-2;
     }
 }
 
@@ -54,18 +58,19 @@ li {
 }
 
 button {
-    color: hsl(0, 0%, 98%);
-    background-color: hsl(12, 88%, 59%);
+    color: $secondary-colour-4;
+    background-color: $primary-colour-1;
     border: 1px transparent dotted;
     border-radius: 30px;
     padding: $small-spacer $medium-spacer;
     height: 4em;
     font-weight: 700;
-}
+    box-shadow: 0 5px $secondary-colour-3;
 
-button:hover {
-    color:hsl(13, 100%, 96%);
-    cursor: pointer;
+    &:hover {
+        color: $secondary-colour-3;
+        cursor: pointer;
+    }
 }
 
 header {
@@ -75,18 +80,13 @@ header {
     align-items: center;
 
     .logo {
-        width: 10em;
+        width: $logo-width-small;
         padding: $small-spacer;
         align-self: start;
     }
 
     nav {
-        width: 50%;
         display: none;
-        ul {
-            display: flex;
-            justify-content: space-between;
-        }
     }
 
     button {
@@ -97,7 +97,7 @@ header {
         width: 1.5em;
         height: 4px;
         display: block;
-        background-color: hsl(233, 12%, 13%);
+        background-color: $secondary-colour-2;
         position: relative;
         z-index: 5;
 
@@ -107,7 +107,7 @@ header {
             content: '';
             height: 4px;
             display: block;
-            background-color: hsl(233, 12%, 13%);
+            background-color: $secondary-colour-2;
             position: absolute;
             left: 0;
         }
@@ -149,10 +149,12 @@ main {
         display: grid;
         grid-template-columns: 4em auto;
         grid-template-rows: auto auto;
+        gap: $medium-spacer;
+        margin-bottom: $medium-spacer;
 
         h3 {
             margin: 0;
-            background-color: hsl(12, 88%, 59%);
+            background-color: $primary-colour-1;
             padding: 0.5em;
             border-radius: 30px;
             width: 100%;
@@ -166,7 +168,7 @@ main {
             justify-self: start;
             font-weight: 700;
             padding: 0.5em $medium-spacer;
-            background-color: hsl(13, 100%, 96%);
+            background-color: $secondary-colour-3;
             width: 200%;
             transform: translateX(-$small-spacer);
         }
@@ -176,6 +178,7 @@ main {
             grid-column-end: 3;
             font-weight: 300;
             color: hsl(227, 12%, 61%);
+            margin: 0;
         }
     }
 }
@@ -227,7 +230,7 @@ main {
 .cta-bar {
     background-image: url(/images/bg-simplify-section-desktop.svg);
     background-size: cover;
-    background-color: hsl(12, 88%, 59%);
+    background-color: $primary-colour-1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -237,22 +240,24 @@ main {
     h2 {
         font-size: $font-large;
         text-align: center;
-        color:hsl(13, 100%, 96%);
+        color:$secondary-colour-3;
+        max-width: 600px;
     }
 
     &__button {
-        color: hsl(12, 88%, 59%);
+        color: $primary-colour-1;
         background-color: hsl(0, 0%, 98%);
+        box-shadow: initial;
 
         &:hover {
             cursor: pointer;
-            color: hsl(13, 100%, 96%);
+            color: $primary-colour-1;
         }
     }
 }
 
 footer {
-    background-color: hsl(233, 12%, 13%);
+    background-color: $secondary-colour-2;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
@@ -272,6 +277,7 @@ footer {
 
         &--button {
             margin: 0 $medium-spacer;
+            box-shadow: initial;
         }
     }
 
@@ -291,6 +297,11 @@ footer {
                 display: block;
                 font-weight: 400;
                 line-height: 2em;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $primary-colour-1;
+                }
             }
         }
     }
@@ -307,11 +318,9 @@ footer {
 
             &:hover {
                 cursor: pointer;
+                fill: $primary-colour-1;
             }
         }
-    }
-
-    p {
     }
 
     .footer__logo {
@@ -325,6 +334,7 @@ footer {
         &--image {
             fill:hsl(0, 0%, 98%);
             width: 50%;
+            max-width: 300px;
         }
     }
 
@@ -368,13 +378,76 @@ footer {
 }
 
 .attribution {
-    color: $secondary-solour-4;
-    border-top: $secondary-solour-4 dashed 1px;
+    color: $secondary-colour-4;
+    border-top: $secondary-colour-4 dashed 1px;
     padding-top: $small-spacer;
     width: 100%;
     text-align: center;
 
     & a {
-        color: $secondary-solour-1;
+        color: $secondary-colour-1;
+    }
+}
+
+@media (min-width: $breakpoint) {
+    header {
+        justify-content: space-between;
+        padding: $medium-spacer;
+
+        .menu-toggle__icon {
+            display: none;
+        }
+
+        nav {
+            display: initial;
+            width: 50%;
+            ul {
+                display: flex;
+                justify-content: space-around;
+
+                li:hover {
+                    cursor: pointer;
+                    color: $secondary-colour-1;
+                }
+            }
+        }
+
+        button {
+            display: initial;
+        }
+    }
+
+    main {
+        padding: $medium-spacer;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: $medium-spacer;
+
+        .main__promotion--item {
+            h4 {
+                background-color: initial;
+                width: auto;
+                transform: initial;
+            }
+
+            p {
+                grid-column-start: 2;
+            }
+        }
+    }
+
+    .cta-bar {
+        padding: $medium-spacer;
+        flex-direction: row;
+        justify-content: space-around;
+
+        h2 {
+            text-align: left;
+        }
+    }
+
+    footer {
+        padding: $medium-spacer;
     }
 }
